@@ -8,5 +8,5 @@ import lombok.Setter;
 @Setter
 @Entity
 public class EwsStudents extends Students{
-    Long registrationNumber;
+    private Long registrationNumber;
 }

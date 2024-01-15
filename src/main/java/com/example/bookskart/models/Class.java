@@ -1,6 +1,6 @@
 package com.example.bookskart.models;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,6 +10,8 @@ import java.util.List;
 @Getter
 @Entity
 public class Class extends BaseModel {
+    @ManyToMany
     List<Subject> subjectList;
+    @OneToMany
     List<Students> studentsList;
 }

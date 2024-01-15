@@ -8,8 +8,12 @@ import lombok.Setter;
 @Setter
 @Entity
 public class Books extends BaseModel{
+    @ManyToOne
     private SubjectPublisher subjectPublisher;
+
+    @Enumerated(value = EnumType.ORDINAL)
     private BookPart bookPart;
+
     private Double price;
 }
 

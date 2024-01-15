@@ -1,10 +1,14 @@
 package com.example.bookskart.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.ListIndexBase;
+
+import java.util.List;
 
 @Entity
 @Setter
@@ -14,4 +18,6 @@ public class Students extends BaseModel{
     private Class aClass;
     @ManyToOne
     private School school;
+    @ManyToMany
+    private List<Books> books;
 }
