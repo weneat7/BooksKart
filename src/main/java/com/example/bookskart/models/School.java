@@ -14,6 +14,7 @@ public class School extends BaseModel{
     private List<Class> classes;
 
     private Long phoneNumber;
+
     @OneToOne
     private Address address;
 

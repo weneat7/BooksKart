@@ -18,6 +18,7 @@ public class Students extends BaseModel{
     private Class aClass;
     @ManyToOne
     private School school;
-    @ManyToMany
-    private List<Books> books;
+    @ManyToOne
+    private Set set;
+
 }

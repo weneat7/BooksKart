@@ -10,8 +10,10 @@ import java.util.List;
 @Getter
 @Entity
 public class Class extends BaseModel {
+    @ManyToOne
+    private Set set;
     @ManyToMany
-    List<Subject> subjectList;
+    List<SubjectPublisher> subjectPublishers;
     @OneToMany
     List<Students> studentsList;
 }
